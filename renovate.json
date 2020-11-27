@@ -1,0 +1,12 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "dependencyDashboardApproval": true,
+  "packageRules": [
+    {
+      "groupName": "all",
+      "packagePatterns": [
+        ".*"
+      ]
+    }
+  ]
+}
