@@ -2,7 +2,6 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "regexManagers": [
     {
-      "$doc": "update the dependency decision versions",
       "fileMatch": ["^doc\\/dependency_decisions\\.yml$"],
       "matchStrings": ["raw.(?<currentValue>.*?).doc"],
       "depNameTemplate": "de.advanova:advanova-parent",
@@ -10,13 +9,10 @@
       "datasourceTemplate": "git-tags"
     },
     {
-      "$doc": "update _IMAGE variables in Dockerfiles",
       "fileMatch": [
         "(^|/|\\.)Dockerfile$",
         "(^|/)Dockerfile\\.[^/]*$"
       ],
-      "matchStrings1": ["^ARG .*_IMAGE=((?<registryUrl>[^\\/]*\\.[^\\/]*)\\/)?(?<depName>.*?):(?<currentValue>[^:]*?)$"],
-      "matchStrings2": ["^ARG .*_IMAGE=(?<lookupName>.*?):(?<currentValue>[^:]*?)$"],
       "matchStrings": ["^ARG .*_IMAGE=(?<depName>.*?):(?<currentValue>[^:]*?)$"],
       "datasourceTemplate": "docker"
     }
