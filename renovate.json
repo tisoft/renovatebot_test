@@ -2,13 +2,6 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "regexManagers": [
     {
-      "fileMatch": ["^doc\\/dependency_decisions\\.yml$"],
-      "matchStrings": ["raw.(?<currentValue>.*?).doc"],
-      "depNameTemplate": "de.advanova:advanova-parent",
-      "lookupNameTemplate": "https://develop-ci1-lin.intern.advanova.com/advanova/advanova-parent.git",
-      "datasourceTemplate": "git-tags"
-    },
-    {
       "fileMatch": [
         "(^|/|\\.)Dockerfile$",
         "(^|/)Dockerfile\\.[^/]*$"
