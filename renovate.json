@@ -6,7 +6,7 @@
         "(^|/|\\.)Dockerfile$",
         "(^|/)Dockerfile\\.[^/]*$"
       ],
-      "matchStrings": ["^ARG .*_IMAGE=(?<depName>.*?):(?<currentValue>[^:]*?)$"],
+      "matchStrings": ["ARG .*IMAGE=(?<depName>.*?):(?<currentValue>.*?)(?:\\s|$)"],
       "datasourceTemplate": "docker"
     }
   ]
